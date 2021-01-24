@@ -1,0 +1,72 @@
+.profile {
+  width: 330px;
+  margin: 0 auto;
+  background-color: $white;
+  border-radius: 30px;
+
+  @media screen and (min-width: 280px) and (max-width: 360px) {
+    width: 90%;
+    margin: 5%;
+  }
+
+  @media (min-width: 768px) {
+    width: 350px;
+  }
+
+  &__top {
+    height: 140px;
+    margin-bottom: 80px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    background-image: url("../../images/bg-pattern-card.svg");
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 5px solid $white;
+      top: 60%;
+      left: calc(50% - 50px);
+      background-image: url("/images/image-victor.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    .profile__name {
+      font-weight: 300;
+      font-size: 15px;
+      > div:first-child {
+        font-weight: 900;
+        margin-bottom: 15px;
+      }
+      .age {
+        font-weight: 300;
+      }
+      > div:last-child {
+        font-size: 12px;
+        margin-bottom: 27px;
+      }
+    }
+  }
+
+  &__attributes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: 0.5px solid $lightGray;
+    padding: 27px;
+    font-size: 10px;
+
+    .highlight {
+      font-size: 15px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+  }
+}

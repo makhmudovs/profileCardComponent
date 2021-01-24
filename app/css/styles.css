@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #189daa;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125rem;
+  padding: 9.375rem 1.5625rem;
+  background-image: url("/images/bg-pattern-top.svg"), url("/images/bg-pattern-bottom.svg");
+  background-size: cover top, cover bottom;
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+@media screen and (min-width: 280px) and (max-width: 360px) {
+  body {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: none;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.profile {
+  width: 330px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+@media screen and (min-width: 280px) and (max-width: 360px) {
+  .profile {
+    width: 90%;
+    margin: 5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile {
+    width: 350px;
+  }
+}
+
+.profile__top {
+  height: 140px;
+  margin-bottom: 80px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-image: url("../../images/bg-pattern-card.svg");
+  position: relative;
+}
+
+.profile__top::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  top: 60%;
+  left: calc(50% - 50px);
+  background-image: url("/images/image-victor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile__title {
+  text-align: center;
+}
+
+.profile__title .profile__name {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.profile__title .profile__name > div:first-child {
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.profile__title .profile__name .age {
+  font-weight: 300;
+}
+
+.profile__title .profile__name > div:last-child {
+  font-size: 12px;
+  margin-bottom: 27px;
+}
+
+.profile__attributes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-top: 0.5px solid #d6d4d4;
+  padding: 27px;
+  font-size: 10px;
+}
+
+.profile__attributes .highlight {
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
